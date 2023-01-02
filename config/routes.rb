@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get '/categories', to: 'categories#index'
   get '/categories/:id', to: 'categories#show'
 
-  get '/hosts'. to: 'hosts#index'
+  get '/hosts', to: 'hosts#index'
   post '/hosts', to: 'hosts#create'
 end
