@@ -1,0 +1,3 @@
+class Lobby < ApplicationRecord
+    
+end
