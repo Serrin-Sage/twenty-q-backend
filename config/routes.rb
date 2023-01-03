@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   get '/hosts', to: 'hosts#index'
   post '/hosts', to: 'hosts#create'
+
+
+  get '/images', to: 'images#index'
 end
