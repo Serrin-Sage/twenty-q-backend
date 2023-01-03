@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get '/categories', to: 'categories#index'
-  get '/categories/:id', to: 'categories#show'
+  get '/games', to: 'games#index'
+  post '/games', to: 'games#create'
 
   get '/hosts', to: 'hosts#index'
   post '/hosts', to: 'hosts#create'
+
+  get '/users', to: 'users#index'
+  post '/users', to: 'users#create'
+
+  get '/lobbies', to: 'lobbies#index'
+  post '/lobbies', to: 'lobbies#create'
+
 end

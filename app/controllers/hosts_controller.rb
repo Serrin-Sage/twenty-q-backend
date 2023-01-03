@@ -5,7 +5,7 @@ class HostsController < ApplicationController
     end
     
     def create
-        host = Host.create(username: params[:username])
+        host = Host.create(name: params[:name])
         render json: host
     end
 end
