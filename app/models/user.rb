@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-    has_many :games, through: :lobby
+    belongs_to :lobby
 end
