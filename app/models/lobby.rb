@@ -1,5 +1,4 @@
 class Lobby < ApplicationRecord
-
-    validates :name, presence: true
-    validates :player_number, numericality: true
+    belongs_to :host
+    has_many :users
 end

@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  host_id: 1
+  lobby_id: 1
+  image: MyString
 
 two:
   name: MyString
-  host_id: 1
+  lobby_id: 1
+  image: MyString
