@@ -5,6 +5,7 @@ class CreateLobbies < ActiveRecord::Migration[6.1]
       t.string :lobbyname
       t.integer :players
       t.string :password
+      t.string :answer, default: nil
 
       t.timestamps
     end
