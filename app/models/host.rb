@@ -1,3 +1,0 @@
-class Host < ApplicationRecord
-    
-end
