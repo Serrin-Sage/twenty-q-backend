@@ -10,6 +10,10 @@ class HostsController < ApplicationController
     
     def create
         host = Host.create(name: params[:name])
-        render json: host
+        if host.valid?
+            render json: host
+        else 
+            render json: host.errors.full_messages, status: 422
+        end
     end
 end
