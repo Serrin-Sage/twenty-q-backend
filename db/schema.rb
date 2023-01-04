@@ -10,11 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_03_183607) do
+ActiveRecord::Schema.define(version: 2023_01_03_152227) do
 
   create_table "images", force: :cascade do |t|
     t.string "name"
     t.string "url"
+  create_table "games", force: :cascade do |t|
+    t.string "category"
+    t.string "answer"
+    t.integer "lobby_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hosts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lobbies", force: :cascade do |t|
+    t.integer "host_id"
+    t.string "lobbyname"
+    t.integer "players"
+    t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.integer "lobby_id"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
