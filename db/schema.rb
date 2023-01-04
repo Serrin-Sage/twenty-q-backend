@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_183607) do
   create_table "lobbies", force: :cascade do |t|
     t.integer "host_id"
     t.string "lobbyname"
-    t.integer "players"
+    t.integer "players", default: 1
     t.string "password"
     t.string "answer"
     t.string "category"

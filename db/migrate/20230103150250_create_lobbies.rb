@@ -3,9 +3,9 @@ class CreateLobbies < ActiveRecord::Migration[6.1]
     create_table :lobbies do |t|
       t.integer :host_id
       t.string :lobbyname
-      t.integer :players
+      t.integer :players, default: 1
       t.string :password
-      t.string :answer, default: nil
+      t.string :answer
       t.string :category
 
       t.timestamps
