@@ -12,33 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_01_03_183607) do
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.integer "host_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "hosts", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "lobby"
-    t.string "answer"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "images", force: :cascade do |t|
     t.string "name"
     t.string "url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "lobbies", force: :cascade do |t|
-    t.string "name"
-    t.string "password_digest"
-    t.integer "player_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
