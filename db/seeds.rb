@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Image.destroy_all
 
 host = Host.create(name: "Gandalf")
 
@@ -16,6 +17,10 @@ user4 = User.create(name: "Pippin", lobby_id: 1)
 lobby = Lobby.create(lobbyname: "The Shire", host_id: 1)
 
 
+
+default = Image.create(name: "Default", url: "https://cdn.discordapp.com/attachments/751140341348040826/1059867790158344322/default-user.png")
+cat = Image.create(name: "Cat", url: "https://cdn.discordapp.com/attachments/751140341348040826/1059903409781739670/cat.png")
+dog = Image.create(name: "Dog", url: "https://cdn.discordapp.com/attachments/751140341348040826/1059903770546409614/dog.png")
 movie = Game.create(category: "Movie", lobby_id: 1)
 tv_show = Game.create(category: "TV Show", lobby_id: 1)
 video_game = Game.create(category: "Video Game", lobby_id: 1)

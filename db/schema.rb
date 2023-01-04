@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_01_03_152227) do
 
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
   create_table "games", force: :cascade do |t|
     t.string "category"
     t.string "answer"

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/games', to: 'games#index'
   post '/games', to: 'games#create'
 
+  get '/images', to: 'images#index'
+  
   get '/hosts', to: 'hosts#index'
   post '/hosts', to: 'hosts#create'
 
