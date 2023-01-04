@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2023_01_03_183607) do
 
   create_table "games", force: :cascade do |t|
     t.string "category"
-    t.integer "lobby_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +37,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_183607) do
     t.integer "players"
     t.string "password"
     t.string "answer"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
