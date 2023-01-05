@@ -10,7 +10,11 @@ class LobbiesController < ApplicationController
 
     def create
         lobby = Lobby.create(host_id: params[:host_id], lobbyname: params[:lobbyname], players: params[:players], password: params[:password], answer: params[:answer], category: params[:category])
-        render json: lobby
+        if lobby.valid?
+            render json: lobby
+        else 
+            render json: lobby.errors.full_messages, status: 422
+        end
     end
 
 end
