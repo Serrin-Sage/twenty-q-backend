@@ -17,4 +17,8 @@ class LobbiesController < ApplicationController
         end
     end
 
+    def destroy 
+        lobby = Lobby.find_by(id: params[:id])
+        lobby.delete
+    end
 end
