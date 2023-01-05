@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2023_01_03_183607) do
 
   create_table "hosts", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

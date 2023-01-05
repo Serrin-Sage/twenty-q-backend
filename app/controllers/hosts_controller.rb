@@ -9,7 +9,7 @@ class HostsController < ApplicationController
     end
     
     def create
-        host = Host.create(name: params[:name])
+        host = Host.create(name: params[:name], image: params[:image])
         if host.valid?
             render json: host
         else 
