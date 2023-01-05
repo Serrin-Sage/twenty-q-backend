@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/lobbies', to: 'lobbies#index'
   get '/lobbies/:id', to: 'lobbies#show'
   post '/lobbies', to: 'lobbies#create'
+  delete '/lobbies/:id', to: 'lobbies#destroy'
 
 end
 
