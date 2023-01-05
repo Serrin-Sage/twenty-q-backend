@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get '/messages/:lobby_id', to: 'messages#show'
   post '/messages', to: 'messages#create'
 
+  get '/questions', to: 'questions#index'
+  get '/questions/:lobby_id', to: 'questions#show'
+  post '/questions', to: 'questions#create'
+
   get '/games', to: 'games#index'
   get '/games/:id', to: 'games#show'
   post '/games', to: 'games#create'
