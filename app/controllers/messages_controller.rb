@@ -14,6 +14,11 @@ class MessagesController < ApplicationController
         ActionCable.server.broadcast("chat_lobby_#{message.lobby_id}", {
             post: message
         })
-        render json: message
+        if  message.valid?
+            render json: message
+      else
+        render json: message.errors.full_messages, status: 422
+      end 
+       
     end
 end
