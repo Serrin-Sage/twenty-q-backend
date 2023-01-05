@@ -12,9 +12,9 @@ default = Image.create(name: "Default", url: "https://cdn.discordapp.com/attachm
 cat = Image.create(name: "Cat", url: "https://cdn.discordapp.com/attachments/751140341348040826/1059903409781739670/cat.png")
 dog = Image.create(name: "Dog", url: "https://cdn.discordapp.com/attachments/751140341348040826/1059903770546409614/dog.png")
 
-user1 = User.create(username: "random1", name: "cris" )
+# user1 = User.create(username: "random1", name: "cris" )
 
-message1 = Message.create(content: "Hello, this is just a test message!", user_id: user1.id)
+# message1 = Message.create(content: "Hello, this is just a test message!", user_id: user1.id)
 
 movie = Game.create(category: "Movie")
 tv_show = Game.create(category: "TV Show")
