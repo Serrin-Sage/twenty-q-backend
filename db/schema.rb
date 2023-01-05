@@ -12,6 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2023_01_04_144848) do
 
+  create_table "games", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hosts", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "name"
     t.string "url"
@@ -19,15 +32,31 @@ ActiveRecord::Schema.define(version: 2023_01_04_144848) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
+
+  create_table "lobbies", force: :cascade do |t|
+    t.integer "host_id"
+    t.string "lobbyname"
+    t.integer "players", default: 1
+    t.string "password"
+    t.string "answer"
+    t.string "category"
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
+
     t.string "username"
+
+    t.string "name"
+    t.integer "lobby_id"
+    t.string "image"
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
