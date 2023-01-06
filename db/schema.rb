@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2023_01_05_203355) do
     t.string "password"
     t.string "answer"
     t.string "category"
+    t.integer "question_count", default: 20
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
