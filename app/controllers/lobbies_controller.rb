@@ -24,7 +24,7 @@ class LobbiesController < ApplicationController
 
     def update
         lobby = Lobby.find_by(id: params[:id])
-        lobby.update(question_count: params[:question_count])
+        lobby.update(question_count: lobby.question_count -= 1)
         render json: lobby
     end
 end
