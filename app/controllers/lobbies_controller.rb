@@ -21,4 +21,10 @@ class LobbiesController < ApplicationController
         lobby = Lobby.find_by(id: params[:id])
         lobby.delete
     end
+
+    def update
+        lobby = Lobby.find_by(id: params[:id])
+        lobby.update(question_count: params[:question_count])
+        render json: lobby
+    end
 end

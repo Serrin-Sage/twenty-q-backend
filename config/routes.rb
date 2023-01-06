@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/lobbies/:id', to: 'lobbies#show'
   post '/lobbies', to: 'lobbies#create'
   delete '/lobbies/:id', to: 'lobbies#destroy'
+  patch '/lobbies/:id', to: 'lobbies#update'
 
 end
 
